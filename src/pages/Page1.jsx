@@ -6,12 +6,13 @@ import Pending from '../icons/pending';
 import PenButton from '../icons/penbutton';
 import Plus from '../icons/plus';
 import SkillTextSection from '../components/SkillTextSection';
-import userdata from "./data.json";
+import userdata1 from "./data.json";
 
 
 
 export default function Page1(){
 
+    const userData = userdata1;
     const navigate = useNavigate({});
     // Change skill names
     const mapUserproficiefy={
@@ -23,10 +24,10 @@ export default function Page1(){
     }
     
 
-
     
     //Check whether Page loaded
     const [isLoaded,setIsLoaded] = useState(false)
+    const [userdata,setUserData] = useState([])
     const [data,setData] = useState([])
 
 
@@ -49,6 +50,7 @@ export default function Page1(){
     useEffect(()=>{
 
         if(!isLoaded){
+            setUserData(userData);
             loadSkillsData();
             setIsLoaded(true);
         }

@@ -1,7 +1,6 @@
 .app{
-    padding: 0 80px;
+    padding: 0 80px ;
     user-select: none;
-    min-height: calc(100vh - 100px);
 }
 
 h1{
